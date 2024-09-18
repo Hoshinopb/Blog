@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="zh" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -46,6 +46,12 @@
       
     
     
+      <link rel="stylesheet" href="../../../from_oi_wiki/css/extra.css?v=13">
+    
+      <link rel="stylesheet" href="../../../css/status.css">
+    
+      <link rel="stylesheet" href="../../../css/neoteroi-mkdocs.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -72,8 +78,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
-          Skip to content
+        <a href="#oop" class="md-skip">
+          跳转至
         </a>
       
     </div>
@@ -85,7 +91,7 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="Hoshino_pb&#39;s Blog" class="md-header__button md-logo" aria-label="Hoshino_pb's Blog" data-md-component="logo">
       
   
@@ -152,16 +158,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="查找">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -172,7 +178,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            正在初始化搜索引擎
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -192,7 +198,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -205,6 +211,8 @@
       <li class="md-tabs__item">
         <a href="../../.." class="md-tabs__link">
           
+  
+    
   
   主页
 
@@ -234,6 +242,8 @@
         <a href="../C%2B%2B/" class="md-tabs__link">
           
   
+    
+  
   编程
 
         </a>
@@ -255,6 +265,8 @@
         <a href="../../../CTF/" class="md-tabs__link">
           
   
+    
+  
   CTF
 
         </a>
@@ -272,6 +284,8 @@
       <li class="md-tabs__item">
         <a href="../../../note/sysII/" class="md-tabs__link">
           
+  
+    
   
   课程笔记
 
@@ -301,7 +315,7 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Hoshino_pb&#39;s Blog" class="md-nav__button md-logo" aria-label="Hoshino_pb's Blog" data-md-component="logo">
       
@@ -322,6 +336,14 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+    
     
       
       
@@ -334,16 +356,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     主页
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
@@ -352,25 +382,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    主页
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -410,6 +421,12 @@
   
   
     
+    
+      
+        
+      
+        
+      
     
     
       
@@ -453,6 +470,14 @@
   
   
     
+    
+      
+        
+      
+        
+      
+        
+      
     
     
       
@@ -565,7 +590,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -574,12 +599,12 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       封装
     </span>
@@ -589,7 +614,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       为什么要进行封装
     </span>
@@ -607,7 +632,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       对象和类
     </span>
@@ -616,7 +641,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       访问控制
     </span>
@@ -625,7 +650,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       小结
     </span>
@@ -639,7 +664,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       继承
     </span>
@@ -648,9 +673,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      多胎
+      多态
     </span>
   </a>
   
@@ -709,6 +734,14 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+    
     
       
       
@@ -721,16 +754,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CTF/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     CTF
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
@@ -740,25 +781,6 @@
           <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../CTF/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    简介
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -767,6 +789,10 @@
   
   
     
+    
+      
+        
+      
     
     
       
@@ -841,6 +867,16 @@
   
   
     
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
       
@@ -976,7 +1012,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -985,12 +1021,12 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       封装
     </span>
@@ -1000,7 +1036,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       为什么要进行封装
     </span>
@@ -1018,7 +1054,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       对象和类
     </span>
@@ -1027,7 +1063,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       访问控制
     </span>
@@ -1036,7 +1072,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       小结
     </span>
@@ -1050,7 +1086,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       继承
     </span>
@@ -1059,9 +1095,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      多胎
+      多态
     </span>
   </a>
   
@@ -1082,87 +1118,248 @@
                   
 
 
-<h1 id="_1">面向对象程序设计</h1>
-<h2 id="_2">封装</h2>
-<h3 id="_3">为什么要进行封装</h3>
+<h1 id="oop">面向对象程序设计(OOP)<a class="headerlink" href="#oop" title="Permanent link">&para;</a></h1>
+<ul>
+<li>OOP中含有下面三个重要思想：封装 继承 多态</li>
+</ul>
+<h2 id="_1">封装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">为什么要进行封装<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>在C语言的编程中，可以通过链表或数组实现一个线性表，并对其编写增删改查等函数。尽管通过两种方式编写的是同一种抽象数据类型 (ADT, Abstract Data Type)，他们的操作函数却不能同名，影响代码编写的效率。</p>
 <p>例如，我们想在一个代码中同时使用对两种线性表的操作函数，我们需要手动将其命名为<code>llist_create()</code> 和 <code>alist_create()</code> ，如果调整部分代码使用的线性表类型，这些相关的函数也要进行修改。</p>
-<h3 id="struct">struct 的扩展</h3>
+<h3 id="struct">struct 的扩展<a class="headerlink" href="#struct" title="Permanent link">&para;</a></h3>
 <p>为了解决上面提到的问题，我们将C语言中的struct进行扩展。</p>
 <p>在C语言中，struct只能在其中使用 <strong>成员变量</strong> ，即只能包含 <strong>数据</strong> ，而在OOP的思想中，struct还可以包含 <strong>成员函数</strong> ，即将 <strong>数据</strong> 和 <strong>操作</strong> 绑定到了一起。</p>
-<p>这里是C++中的一个链表的定义</p>
-<pre><code>struct node {
-    elem* val;
-    struct node* next;
-};
-
-struct linkedlist {
-    struct node* llist;
-
-    static linkedlist create();
-    int size() const;
-    elem* get(int index) const;
-    void add(elem val);
-    // ...
-};
-</code></pre>
+<p>这里是C++中的一个链表的定义
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">elem</span><span class="o">*</span><span class="w"> </span><span class="n">val</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="o">*</span><span class="w"> </span><span class="n">next</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">};</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="k">struct</span><span class="w"> </span><span class="nc">linkedlist</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="o">*</span><span class="w"> </span><span class="n">llist</span><span class="p">;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">linkedlist</span><span class="w"> </span><span class="nf">create</span><span class="p">();</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">size</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="n">elem</span><span class="o">*</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">elem</span><span class="w"> </span><span class="n">val</span><span class="p">);</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="c1">// ...</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div></p>
 <p>通过这样绑定，我们可以使用<code>list.add(1)</code>而非<code>llist_add(list,1)</code> <code>alist_add(list,1)</code>操作一个线性表。<code>list.add(1)</code>中，add函数的具体操作取决于list在create时的类型，这样我们的程序就能根据数据类型来自动选择操作类型。比如当list是由链表构成的，<code>list.add()</code>， 执行的就是 <code>linkedlist::add</code> ， <code>::</code> 前指示其所在<strong>类</strong>，后指示其函数。</p>
-<h3 id="_4">对象和类</h3>
+<h3 id="_3">对象和类<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>上面提到的绑定了数据和操作的数据类型，被称作<strong>类(Class)</strong>。</p>
 <p>由类创建的一个实例，被称作<strong>对象</strong>或<strong>实例</strong>。对象包含他的状态和行为，状态即类中变量的具体值，行为即他进行的操作。</p>
 <p>类和对象的关系可以类比为人类和烁烁(或是其他具体的人)：人类都有如年龄，身高等数据，而烁烁在一个时刻里年龄和身高只有一个具体的值；人类可以进行多样的行为，而烁烁可以进行夜跑这一具体的行为。</p>
-<h3 id="_5">访问控制</h3>
+<h3 id="_4">访问控制<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>对于类中的一些数据或者函数，我们有时不希望他被外部代码访问或调用，比如下面这个类:</p>
-<pre><code>struct User {
-    int id, age;
-    char* password;
-
-    bool checkPassword(char* pw); // check if pw == password
-    // ...
-};
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">password</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">checkPassword</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">pw</span><span class="p">);</span><span class="w"> </span><span class="c1">// check if pw == password</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="c1">// ...</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
 <p>我们可以通过<code>printf("%s", user1.password);</code>轻松获取密码，或者通过其他方式修改这些值。</p>
 <p>为了避免这些问题，C++提供了 <code>public</code>, <code>private</code> 和 <code>protected</code> 三种访问权限，<code>public</code>表示其下的成员可以被外部调用，<code>private</code>表示其下的成员只能在类的成员函数中调用。</p>
-<p>修改后的代码如下：</p>
-<pre><code>struct User {
-private:
-    int id, age;
-    char* password;
-public:
-    bool checkPassword(char* pw); // check if pw == password
-    void setAge(int v) {
-        if (v &gt;= 0)
-            age = v;
-    }
-    int getAge() { return age; }
-};
-</code></pre>
+<p>修改后的代码如下：
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">password</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">checkPassword</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">pw</span><span class="p">);</span><span class="w"> </span><span class="c1">// check if pw == password</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAge</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">            </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">getAge</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div></p>
 <p>此时，我们就无法从外部查看password的值。同时增加两个函数，用于修改和查看age这个保密需求低的值。</p>
 <p>值得注意的是，通过private保护的数据不一定是安全的，他更像是一种带功能的标签，用于避免代码在编写过程中对其中成员的越界使用。</p>
-<p>下面这段使用了<code>private</code>进行了保护的类仍然是极其不安全的。</p>
-<pre><code>struct User {
-private:
-    int id, age;
-    char name[10];
-    char* password;
-public:
-    bool checkPassword(char* pw); // check if pw == password
-    void setname(char* str) {
-        strncpy(name, str, sizeof(name));
-    }
-    void getname(){
-        puts(name);
-    }
-};
-</code></pre>
+<p>下面这段使用了<code>private</code>进行了保护的类仍然是极其不安全的。
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">password</span><span class="p">;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">checkPassword</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">pw</span><span class="p">);</span><span class="w"> </span><span class="c1">// check if pw == password</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setname</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">        </span><span class="n">strncpy</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">name</span><span class="p">));</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">getname</span><span class="p">(){</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div></p>
 <p>在编译器不进行保护的情况下，name和password在内存中是紧挨着的，当我们调用setname时，如果输入了一个长度超过10的str，会导致name的结尾没有 '\0' ，而puts输出时会输出到 '\0' 为止，此时<code>puts(name)</code>就会将password一同输出。</p>
-<pre><code>现代编译器为了安全考虑会自动将可修改的name存储到不可修改的password后面，避免泄露过多信息。
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>现代编译器为了安全考虑会自动将可修改的name存储到不可修改的password后面，避免泄露过多信息。
+</code></pre></div></td></tr></table></div>
 <p>在C++中，class默认是private的，struct默认是public的，这是其唯一区别。</p>
-<h3 id="_6">小结</h3>
+<h3 id="_5">小结<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>综上所述，<strong>封装</strong> 就是将数据和操作数据的函数绑定在一起，并给予必要的访问控制。通过封装的思想构建数据结构，有利于我们对其数据和相关的函数进行操作，即围绕对象进行操作。</p>
-<h2 id="_7">继承</h2>
-<h2 id="_8">多胎</h2>
+<h2 id="_6">继承<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>假设我们需要写一个画图软件,我们可以使用上面学到的类，每一个图形使用一个类，得到如下代码：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Point</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">};</span><span class="w">  </span><span class="c1">// 用来保存坐标</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">Circle</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="n">Point</span><span class="w"> </span><span class="n">center</span><span class="p">;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="c1">// 做一些准备（例如准备画笔）</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">        </span><span class="c1">// 画圆！</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">        </span><span class="c1">// 做一些后续处理（例如重置画笔）</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="p">};</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="k">class</span><span class="w"> </span><span class="nc">Rectangle</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span><span class="n">Point</span><span class="w"> </span><span class="n">center</span><span class="p">;</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">        </span><span class="c1">// 做一些准备（例如准备画笔）</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">        </span><span class="c1">// 画长方形！</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">        </span><span class="c1">// 做一些后续处理（例如重置画笔）</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<p>我们发现两种图形中包含了<code>draw()</code> <code>center</code> 以及准备和重置等相同的工作。这时我们想要提取这些类的共同点，组成一个“类的交集”。然后在创建一个图形的类的时候，使用这个“交集”，从而减少代码中的重复内容，便于维护。</p>
+<p><strong>继承</strong> 指的就是我们克隆已有的类，再增加或修改部分内容得到一个新的类。被继承的类叫<strong>基类/父类</strong>，产生的新类叫<strong>派生类/子类</strong></p>
+<p>对于上面的问题，我们可以定义基类
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Shape</span><span class="w"> </span><span class="p">{</span><span class="w">       </span><span class="c1">// 基类 Shape</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">prepare</span><span class="p">()</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="cm">/* 做一些准备（例如准备画笔）*/</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">finalize</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* 做一些后续处理（例如重置画笔）*/</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="n">Point</span><span class="w"> </span><span class="n">center</span><span class="p">;</span><span class="w">   </span><span class="c1">// 共有的成员变量</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// 共有的成员函数</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">        </span><span class="n">prepare</span><span class="p">();</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">        </span><span class="n">do_draw</span><span class="p">();</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">        </span><span class="n">finalize</span><span class="p">();</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_draw</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 要求所有派生类都实现 do_draw()</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div></p>
+<p>然后我们可以继承出不同图形的类，并针对其图形特征添加内容，以及定义<code>do_draw()</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Circle</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// Circle 继承 Shape</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span><span class="w">     </span><span class="c1">// 独有的成员变量</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">        </span><span class="c1">// 画圆！</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="p">};</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="k">class</span><span class="w"> </span><span class="nc">Rectangle</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Rectangle 继承 Shape</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"> </span><span class="c1">// 独有的成员函数</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">        </span><span class="c1">// 画长方形！</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<p>此时，我们可以更加简易地添加新的图形，也可以通过修改基类，一次性给所有的图形绘图添加如笔画粗细、颜色等其他特征。</p>
+<h2 id="_7">多态<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>对于前面提到的 <code>add()</code> 或者是 <code>do_draw()</code> 函数，其具体内容是由调用它的对象决定的，这就是OOP中的<strong>多态</strong>。</p>
 
 
 
@@ -1182,6 +1379,12 @@ public:
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
         
       </main>
       
@@ -1213,12 +1416,22 @@ public:
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.af256bd8.min.js"></script>
       
+        <script src="../../../from_oi_wiki/js/extra.js"></script>
+      
+        <script src="../../../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../js/tablesort.js"></script>
       
     
   </body>
