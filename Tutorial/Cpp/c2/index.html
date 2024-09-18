@@ -606,8 +606,53 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      对象和类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      访问控制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      小结
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      继承
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      多胎
+    </span>
+  </a>
   
 </li>
       
@@ -972,8 +1017,53 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      对象和类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      访问控制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      小结
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      继承
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      多胎
+    </span>
+  </a>
   
 </li>
       
@@ -1000,7 +1090,79 @@
 <h3 id="struct">struct 的扩展</h3>
 <p>为了解决上面提到的问题，我们将C语言中的struct进行扩展。</p>
 <p>在C语言中，struct只能在其中使用 <strong>成员变量</strong> ，即只能包含 <strong>数据</strong> ，而在OOP的思想中，struct还可以包含 <strong>成员函数</strong> ，即将 <strong>数据</strong> 和 <strong>操作</strong> 绑定到了一起。</p>
-<p>通过这样绑定，我们可以使用<code>list.add(1)</code>而非<code>llist_add(list,1)</code> <code>alist_add(list,1)</code>操作一个线性表。<code>list.add(1)</code>中，add函数的具体操作取决于list在create时的类型，这样我们的程序就能根据数据类型来自动选择操作类型。</p>
+<p>这里是C++中的一个链表的定义</p>
+<pre><code>struct node {
+    elem* val;
+    struct node* next;
+};
+
+struct linkedlist {
+    struct node* llist;
+
+    static linkedlist create();
+    int size() const;
+    elem* get(int index) const;
+    void add(elem val);
+    // ...
+};
+</code></pre>
+<p>通过这样绑定，我们可以使用<code>list.add(1)</code>而非<code>llist_add(list,1)</code> <code>alist_add(list,1)</code>操作一个线性表。<code>list.add(1)</code>中，add函数的具体操作取决于list在create时的类型，这样我们的程序就能根据数据类型来自动选择操作类型。比如当list是由链表构成的，<code>list.add()</code>， 执行的就是 <code>linkedlist::add</code> ， <code>::</code> 前指示其所在<strong>类</strong>，后指示其函数。</p>
+<h3 id="_4">对象和类</h3>
+<p>上面提到的绑定了数据和操作的数据类型，被称作<strong>类(Class)</strong>。</p>
+<p>由类创建的一个实例，被称作<strong>对象</strong>或<strong>实例</strong>。对象包含他的状态和行为，状态即类中变量的具体值，行为即他进行的操作。</p>
+<p>类和对象的关系可以类比为人类和烁烁(或是其他具体的人)：人类都有如年龄，身高等数据，而烁烁在一个时刻里年龄和身高只有一个具体的值；人类可以进行多样的行为，而烁烁可以进行夜跑这一具体的行为。</p>
+<h3 id="_5">访问控制</h3>
+<p>对于类中的一些数据或者函数，我们有时不希望他被外部代码访问或调用，比如下面这个类:</p>
+<pre><code>struct User {
+    int id, age;
+    char* password;
+
+    bool checkPassword(char* pw); // check if pw == password
+    // ...
+};
+</code></pre>
+<p>我们可以通过<code>printf("%s", user1.password);</code>轻松获取密码，或者通过其他方式修改这些值。</p>
+<p>为了避免这些问题，C++提供了 <code>public</code>, <code>private</code> 和 <code>protected</code> 三种访问权限，<code>public</code>表示其下的成员可以被外部调用，<code>private</code>表示其下的成员只能在类的成员函数中调用。</p>
+<p>修改后的代码如下：</p>
+<pre><code>struct User {
+private:
+    int id, age;
+    char* password;
+public:
+    bool checkPassword(char* pw); // check if pw == password
+    void setAge(int v) {
+        if (v &gt;= 0)
+            age = v;
+    }
+    int getAge() { return age; }
+};
+</code></pre>
+<p>此时，我们就无法从外部查看password的值。同时增加两个函数，用于修改和查看age这个保密需求低的值。</p>
+<p>值得注意的是，通过private保护的数据不一定是安全的，他更像是一种带功能的标签，用于避免代码在编写过程中对其中成员的越界使用。</p>
+<p>下面这段使用了<code>private</code>进行了保护的类仍然是极其不安全的。</p>
+<pre><code>struct User {
+private:
+    int id, age;
+    char name[10];
+    char* password;
+public:
+    bool checkPassword(char* pw); // check if pw == password
+    void setname(char* str) {
+        strncpy(name, str, sizeof(name));
+    }
+    void getname(){
+        puts(name);
+    }
+};
+</code></pre>
+<p>在编译器不进行保护的情况下，name和password在内存中是紧挨着的，当我们调用setname时，如果输入了一个长度超过10的str，会导致name的结尾没有 '\0' ，而puts输出时会输出到 '\0' 为止，此时<code>puts(name)</code>就会将password一同输出。</p>
+<pre><code>现代编译器为了安全考虑会自动将可修改的name存储到不可修改的password后面，避免泄露过多信息。
+</code></pre>
+<p>在C++中，class默认是private的，struct默认是public的，这是其唯一区别。</p>
+<h3 id="_6">小结</h3>
+<p>综上所述，<strong>封装</strong> 就是将数据和操作数据的函数绑定在一起，并给予必要的访问控制。通过封装的思想构建数据结构，有利于我们对其数据和相关的函数进行操作，即围绕对象进行操作。</p>
+<h2 id="_7">继承</h2>
+<h2 id="_8">多胎</h2>
 
 
 
