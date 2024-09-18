@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -534,6 +539,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    面向对象程序设计
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -544,6 +562,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      封装
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="封装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要进行封装
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct" class="md-nav__link">
+    <span class="md-ellipsis">
+      struct 的扩展
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -865,6 +935,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      封装
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="封装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要进行封装
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct" class="md-nav__link">
+    <span class="md-ellipsis">
+      struct 的扩展
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -879,9 +992,15 @@
                   
 
 
-  <h1>面向对象程序设计</h1>
-
-
+<h1 id="_1">面向对象程序设计</h1>
+<h2 id="_2">封装</h2>
+<h3 id="_3">为什么要进行封装</h3>
+<p>在C语言的编程中，可以通过链表或数组实现一个线性表，并对其编写增删改查等函数。尽管通过两种方式编写的是同一种抽象数据类型 (ADT, Abstract Data Type)，他们的操作函数却不能同名，影响代码编写的效率。</p>
+<p>例如，我们想在一个代码中同时使用对两种线性表的操作函数，我们需要手动将其命名为<code>llist_create()</code> 和 <code>alist_create()</code> ，如果调整部分代码使用的线性表类型，这些相关的函数也要进行修改。</p>
+<h3 id="struct">struct 的扩展</h3>
+<p>为了解决上面提到的问题，我们将C语言中的struct进行扩展。</p>
+<p>在C语言中，struct只能在其中使用 <strong>成员变量</strong> ，即只能包含 <strong>数据</strong> ，而在OOP的思想中，struct还可以包含 <strong>成员函数</strong> ，即将 <strong>数据</strong> 和 <strong>操作</strong> 绑定到了一起。</p>
+<p>通过这样绑定，我们可以使用<code>list.add(1)</code>而非<code>llist_add(list,1)</code> <code>alist_add(list,1)</code>操作一个线性表。<code>list.add(1)</code>中，add函数的具体操作取决于list在create时的类型，这样我们的程序就能根据数据类型来自动选择操作类型。</p>
 
 
 
