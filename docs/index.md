@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+# Welcome to Hoshinopb's Blog
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## 主要内容
+	正在建设:
+	CTF Web笔记
+	密码学笔记
+	C++自学笔记
+	因为我比较懒，所以左边这些引用默认带行数，之后再优化
+	
+预计包含编程语言、CTF、网络安全等笔记，以及课程学习中的实验报告等。
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
